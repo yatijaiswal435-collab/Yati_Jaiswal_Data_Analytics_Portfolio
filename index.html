@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yati Jaiswal | Data Analyst Portfolio</title>
+<meta name="description" content="Yati Jaiswal's Data Analyst portfolio showcasing SQL, Power BI, Tableau, Excel and Python projects, dashboards and data-driven business analysis.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[var(--bg)]/90 backdrop-blur border-b border-[var(--line)]">
+  <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="#home" class="font-display font-extrabold text-lg tracking-tight">
+      Yati Jaiswal
+    </a>
+
+    <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" aria-label="GitHub profile" class="text-[var(--ink-soft)] hover:text-[var(--accent)] transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.09-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.83.12 3.13.74.8 1.18 1.83 1.18 3.09 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yati-jaiswal/" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="text-[var(--ink-soft)] hover:text-[var(--accent)] transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+      <a href="#contact" class="btn-primary rounded-lg px-4 py-2 text-sm font-semibold">Let's Connect</a>
+    </div>
+
+    <button id="menu-toggle" class="lg:hidden p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="lg:hidden max-h-0 opacity-0 px-5">
+    <div class="flex flex-col gap-1 pb-5 text-sm font-medium border-t border-[var(--line)] pt-4">
+      <a href="#home" class="py-2">Home</a>
+      <a href="#about" class="py-2">About</a>
+      <a href="#skills" class="py-2">Skills</a>
+      <a href="#projects" class="py-2">Projects</a>
+      <a href="#experience" class="py-2">Experience</a>
+      <a href="#certifications" class="py-2">Certifications</a>
+      <a href="#resume" class="py-2">Resume</a>
+      <a href="#contact" class="py-2">Contact</a>
+      <div class="flex items-center gap-5 pt-3">
+        <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" aria-label="GitHub profile" class="text-[var(--ink-soft)]">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.09-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.83.12 3.13.74.8 1.18 1.83 1.18 3.09 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yati-jaiswal/" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="text-[var(--ink-soft)]">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="#contact" class="btn-primary rounded-lg px-4 py-2 text-sm font-semibold">Let's Connect</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-5">
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center pt-28 pb-16">
+    <div class="grid lg:grid-cols-2 gap-14 items-center w-full">
+      <div>
+        <p class="font-display font-bold text-2xl mb-1">Yati Jaiswal</p>
+        <p class="text-[var(--accent)] font-semibold mb-6">Data Analyst</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-extrabold leading-[1.12] mb-6 text-[var(--ink)]">
+          Turning Data into Insights, Decisions into Impact.
+        </h1>
+        <p class="text-[var(--ink-soft)] text-lg mb-8 max-w-lg leading-relaxed">
+          I'm an aspiring Data Analyst passionate about transforming raw data into actionable business insights. I work with SQL, Excel, Power BI, Tableau and Python to analyze data, build dashboards and solve real-world business problems.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#projects" class="btn-primary rounded-lg px-6 py-3 font-semibold">View My Projects</a>
+          <a href="#resume" class="btn-ghost rounded-lg px-6 py-3 font-semibold">Download Resume</a>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" aria-label="GitHub profile" class="text-[var(--ink-soft)] hover:text-[var(--accent)] transition-colors">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.09-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.83.12 3.13.74.8 1.18 1.83 1.18 3.09 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/yati-jaiswal/" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="text-[var(--ink-soft)] hover:text-[var(--accent)] transition-colors">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+        </div>
+        <p class="text-sm text-[var(--muted)] mt-8 font-medium">SQL &nbsp;|&nbsp; Power BI &nbsp;|&nbsp; Tableau &nbsp;|&nbsp; Excel &nbsp;|&nbsp; Python</p>
+      </div>
+
+      <!-- Hero visual: abstract analytics dashboard, built in SVG, not a stock photo -->
+      <div class="card rounded-2xl p-6 hero-viz" role="img" aria-label="Abstract illustration of a data dashboard with bar chart, line trend and KPI cards">
+        <div class="flex items-center justify-between mb-5">
+          <span class="font-display font-bold text-sm">Overview</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Live</span>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mb-5">
+          <div class="rounded-lg border border-[var(--line)] p-3">
+            <p class="text-xs text-[var(--muted)] mb-1">Revenue</p>
+            <p class="font-display font-bold text-lg">₹4.2L</p>
+          </div>
+          <div class="rounded-lg border border-[var(--line)] p-3">
+            <p class="text-xs text-[var(--muted)] mb-1">Growth</p>
+            <p class="font-display font-bold text-lg text-[var(--accent)]">+12%</p>
+          </div>
+          <div class="rounded-lg border border-[var(--line)] p-3">
+            <p class="text-xs text-[var(--muted)] mb-1">Segments</p>
+            <p class="font-display font-bold text-lg">6</p>
+          </div>
+        </div>
+        <svg viewBox="0 0 300 140" class="w-full h-auto mb-4">
+          <line x1="0" y1="30" x2="300" y2="30" class="grid-line"/>
+          <line x1="0" y1="70" x2="300" y2="70" class="grid-line"/>
+          <line x1="0" y1="110" x2="300" y2="110" class="grid-line"/>
+          <rect x="10" y="60" width="24" height="50" class="bar light" rx="3"/>
+          <rect x="46" y="40" width="24" height="70" class="bar" rx="3"/>
+          <rect x="82" y="75" width="24" height="35" class="bar light" rx="3"/>
+          <rect x="118" y="20" width="24" height="90" class="bar" rx="3"/>
+          <rect x="154" y="55" width="24" height="55" class="bar light" rx="3"/>
+          <rect x="190" y="35" width="24" height="75" class="bar" rx="3"/>
+          <rect x="226" y="65" width="24" height="45" class="bar light" rx="3"/>
+          <rect x="262" y="15" width="24" height="95" class="bar" rx="3"/>
+          <path d="M22 55 L58 35 L94 60 L130 25 L166 45 L202 30 L238 50 L274 20" class="line-path"/>
+          <circle cx="274" cy="20" r="4" class="dot"/>
+        </svg>
+        <div class="font-mono text-xs text-[var(--muted)] bg-[var(--accent-tint)] rounded-lg p-3 leading-relaxed">
+          SELECT region, SUM(profit)<br>
+          FROM sales<br>
+          GROUP BY region<br>
+          ORDER BY 2 DESC;
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 reveal">
+    <div class="grid md:grid-cols-[1fr,2fr] gap-10">
+      <div>
+        <p class="text-[var(--accent)] font-semibold text-sm mb-2">About</p>
+        <h2 class="font-display text-3xl font-extrabold">About Me</h2>
+      </div>
+      <div>
+        <div class="space-y-5 text-[var(--ink-soft)] text-lg leading-relaxed mb-10">
+          <p>I'm Yati Jaiswal, an aspiring Data Analyst with a B.Sc. background and a strong interest in data-driven problem solving.</p>
+          <p>I enjoy working with data to understand what is happening, why it is happening and what actions can be taken based on those insights.</p>
+          <p>Through hands-on projects, internships and continuous learning, I have developed practical skills in SQL, Excel, Power BI, Tableau and Python.</p>
+          <p>I'm currently focused on building strong analytical, technical and business skills while pursuing opportunities to begin my career in Data Analytics.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <p class="font-display font-bold mb-4">What I Enjoy</p>
+          <ul class="grid sm:grid-cols-2 gap-3 text-[var(--ink-soft)]">
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-1">▸</span>Finding patterns in data</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-1">▸</span>Solving business problems</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-1">▸</span>Building dashboards</li>
+            <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-1">▸</span>Learning new analytical tools</li>
+            <li class="flex items-start gap-2 sm:col-span-2"><span class="text-[var(--accent)] mt-1">▸</span>Turning complex data into simple insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICS APPROACH -->
+  <section class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Process</p>
+    <h2 class="font-display text-3xl font-extrabold mb-10">How I Approach Data</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card rounded-2xl p-6">
+        <p class="step-num mb-3">01</p>
+        <p class="font-display font-bold mb-2">Understand</p>
+        <p class="text-[var(--ink-soft)] text-sm leading-relaxed">Define the business problem and identify the questions that need to be answered.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="step-num mb-3">02</p>
+        <p class="font-display font-bold mb-2">Prepare</p>
+        <p class="text-[var(--ink-soft)] text-sm leading-relaxed">Clean, transform and organize the data for analysis.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="step-num mb-3">03</p>
+        <p class="font-display font-bold mb-2">Analyze</p>
+        <p class="text-[var(--ink-soft)] text-sm leading-relaxed">Use SQL, Excel, Python and statistical/analytical techniques to identify patterns and trends.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="step-num mb-3">04</p>
+        <p class="font-display font-bold mb-2">Communicate</p>
+        <p class="text-[var(--ink-soft)] text-sm leading-relaxed">Build dashboards and communicate insights and recommendations clearly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Skills</p>
+    <h2 class="font-display text-3xl font-extrabold mb-10">What I Work With</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card rounded-2xl p-6">
+        <p class="font-display font-bold mb-4">Data Analytics</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag text-sm px-3 py-1.5 rounded-full">SQL</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Excel</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Python</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Pandas</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">NumPy</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Exploratory Data Analysis</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Data Cleaning</span>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="font-display font-bold mb-4">Business Intelligence</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Power BI</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">DAX</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Data Modeling</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">KPI Development</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Interactive Dashboards</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Reporting</span>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="font-display font-bold mb-4">Data Visualization</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Power BI</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Tableau</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Charts</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Dashboard Design</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Data Storytelling</span>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="font-display font-bold mb-4">Databases</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag text-sm px-3 py-1.5 rounded-full">MySQL</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Relational Databases</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">SQL Joins</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Aggregations</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Subqueries</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">CTEs</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Window Functions</span>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6 md:col-span-2">
+        <p class="font-display font-bold mb-4">Tools</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Git</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">GitHub</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Google Colab</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">VS Code</span>
+          <span class="tag text-sm px-3 py-1.5 rounded-full">Streamlit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Projects</p>
+    <h2 class="font-display text-3xl font-extrabold mb-2">Featured Projects</h2>
+    <p class="text-[var(--ink-soft)] mb-8 max-w-2xl">Business Question → Data → Analysis → Visualization → Insights.</p>
+
+    <div class="flex flex-wrap gap-2 mb-10" id="filters">
+      <button class="filter-btn rounded-full px-4 py-2 text-sm font-medium" data-filter="all" data-active="true">All</button>
+      <button class="filter-btn rounded-full px-4 py-2 text-sm font-medium" data-filter="excel" data-active="false">Excel</button>
+      <button class="filter-btn rounded-full px-4 py-2 text-sm font-medium" data-filter="python" data-active="false">Python</button>
+      <button class="filter-btn rounded-full px-4 py-2 text-sm font-medium" data-filter="powerbi" data-active="false">Power BI</button>
+    </div>
+
+    <div id="project-grid" class="grid md:grid-cols-2 gap-6">
+
+      <!-- 1: Job Market Analysis Dashboard -->
+      <article class="project-card card rounded-2xl p-6 flex flex-col md:col-span-2" data-cat="excel">
+        <img src="https://github.com/yatijaiswal435-collab/Job_Market_Analysis_Dashboard/raw/main/screenshots/Job_Market_Analysis_Dashboard.png" alt="Job Market Analysis Dashboard preview built in Excel" class="rounded-xl border border-[var(--line)] mb-5 w-full object-cover" loading="lazy" onerror="this.style.display='none'">
+        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+          <h3 class="font-display text-xl font-bold">Job Market Analysis Dashboard — 2025</h3>
+          <span class="tag text-xs px-2 py-1 rounded-full">Excel / Business Intelligence</span>
+        </div>
+        <p class="text-[var(--ink-soft)] mb-4">An interactive Excel dashboard analyzing a 2025 Indian job-market dataset to understand demand, salary, location and skill patterns.</p>
+
+        <div class="mb-4">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Business Question</p>
+          <p class="text-sm text-[var(--ink-soft)]">What can job-market data tell us about employment opportunities, salary patterns, locations, work modes, industries and skills in 2025?</p>
+        </div>
+        <div class="mb-4">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Approach</p>
+          <p class="text-sm text-[var(--ink-soft)]">Cleaned and prepared 420 job listings, then used pivot tables, pivot charts, KPI cards and lookup/conditional functions (VLOOKUP, XLOOKUP, COUNTIFS, SUMIFS) to build an interactive dashboard.</p>
+        </div>
+        <div class="mb-5">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Key Insights</p>
+          <ul class="text-sm text-[var(--ink-soft)] space-y-1 list-disc list-inside">
+            <li>Sales Executive was among the most frequently listed roles in the dataset analyzed</li>
+            <li>Bengaluru was the leading location for job opportunities</li>
+            <li>Average salary generally increased with experience level</li>
+            <li>Remote roles made up a smaller share of listings compared to hybrid and on-site</li>
+          </ul>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="tag text-xs px-2 py-1 rounded-full">Excel</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Pivot Tables</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Dashboard Design</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Business Insights</span>
+        </div>
+        <a href="https://github.com/yatijaiswal435-collab/Job_Market_Analysis_Dashboard" target="_blank" rel="noopener" class="btn-ghost rounded-lg px-5 py-2.5 text-sm font-semibold mt-auto self-start">View on GitHub</a>
+      </article>
+
+      <!-- 2: Supermarket Sales Analysis -->
+      <article class="project-card card rounded-2xl p-6 flex flex-col" data-cat="python">
+        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+          <h3 class="font-display text-lg font-bold">Supermarket Sales Analysis</h3>
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+        </div>
+        <p class="text-[var(--ink-soft)] text-sm mb-4">Analysis of a supermarket sales dataset to understand sales, profit and product performance.</p>
+        <div class="mb-3">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Problem</p>
+          <p class="text-sm text-[var(--ink-soft)]">Which products, categories, years and regions drive the most sales and profit?</p>
+        </div>
+        <div class="mb-3">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Approach</p>
+          <p class="text-sm text-[var(--ink-soft)]">Cleaned the dataset, handled missing values, engineered month/year columns, then analyzed sales, profit and quantity with Pandas and visualized results with Matplotlib.</p>
+        </div>
+        <div class="mb-5">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Key Insights</p>
+          <ul class="text-sm text-[var(--ink-soft)] space-y-1 list-disc list-inside">
+            <li>Identified top-performing products and categories by sales and profit</li>
+            <li>Found sales and profit patterns that varied by year and region</li>
+          </ul>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Pandas</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Matplotlib</span>
+        </div>
+        <a href="https://github.com/yatijaiswal435-collab/Supermarket-Sales-Analysis" target="_blank" rel="noopener" class="btn-ghost rounded-lg px-5 py-2.5 text-sm font-semibold mt-auto self-start">View on GitHub</a>
+      </article>
+
+      <!-- 3: Web Data Analysis -->
+      <article class="project-card card rounded-2xl p-6 flex flex-col" data-cat="python">
+        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+          <h3 class="font-display text-lg font-bold">Web Data Analysis</h3>
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+        </div>
+        <p class="text-[var(--ink-soft)] text-sm mb-4">Analysis of website traffic and user engagement data to understand how visitors interact with a site.</p>
+        <div class="mb-3">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Problem</p>
+          <p class="text-sm text-[var(--ink-soft)]">Which traffic channels bring the most users, and do they actually engage once they arrive?</p>
+        </div>
+        <div class="mb-3">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Approach</p>
+          <p class="text-sm text-[var(--ink-soft)]">Cleaned and explored the dataset, then visualized traffic and engagement patterns using line graphs, bar charts, box plots and heatmaps in Matplotlib and Seaborn.</p>
+        </div>
+        <div class="mb-5">
+          <p class="text-sm font-semibold text-[var(--ink)] mb-1">Key Insights</p>
+          <ul class="text-sm text-[var(--ink-soft)] space-y-1 list-disc list-inside">
+            <li>Direct and Organic Social channels brought the highest number of users</li>
+            <li>Organic Social users showed stronger engagement than other channels</li>
+            <li>High traffic did not always translate into high engagement</li>
+          </ul>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Pandas</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Seaborn</span>
+        </div>
+        <a href="https://github.com/yatijaiswal435-collab/web-data-analysis" target="_blank" rel="noopener" class="btn-ghost rounded-lg px-5 py-2.5 text-sm font-semibold mt-auto self-start">View on GitHub</a>
+      </article>
+
+      <!-- 4: HR Attrition Analysis -->
+      <article class="project-card card rounded-2xl p-6 flex flex-col" data-cat="powerbi">
+        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+          <h3 class="font-display text-lg font-bold">HR Attrition Analysis</h3>
+          <span class="tag text-xs px-2 py-1 rounded-full">Power BI</span>
+        </div>
+        <p class="text-[var(--ink-soft)] text-sm mb-4">A Power BI project analyzing employee attrition, built from HR data with a dedicated dashboard and screenshots in the repository.</p>
+        <div class="mb-5">
+          <p class="text-sm text-[var(--muted)] italic">Detailed write-up in progress — full business questions and insights coming soon. Browse the repo's Data, Power BI and Screenshot folders on GitHub in the meantime.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="tag text-xs px-2 py-1 rounded-full">Power BI</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">HR Analytics</span>
+        </div>
+        <a href="https://github.com/yatijaiswal435-collab/HR-Attrition-Analysis" target="_blank" rel="noopener" class="btn-ghost rounded-lg px-5 py-2.5 text-sm font-semibold mt-auto self-start">View on GitHub</a>
+      </article>
+
+      <!-- 5: Hospital Data Analysis -->
+      <article class="project-card card rounded-2xl p-6 flex flex-col" data-cat="python">
+        <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+          <h3 class="font-display text-lg font-bold">Hospital Data Analysis</h3>
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+        </div>
+        <p class="text-[var(--ink-soft)] text-sm mb-4">A notebook-based analysis of hospital data, exploring the dataset with Python.</p>
+        <div class="mb-5">
+          <p class="text-sm text-[var(--muted)] italic">Detailed write-up in progress — full business questions and insights coming soon. The notebook and dataset are available in the repo on GitHub.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="tag text-xs px-2 py-1 rounded-full">Python</span>
+          <span class="tag text-xs px-2 py-1 rounded-full">Jupyter Notebook</span>
+        </div>
+        <a href="https://github.com/yatijaiswal435-collab/Hospital-Data-Analysis" target="_blank" rel="noopener" class="btn-ghost rounded-lg px-5 py-2.5 text-sm font-semibold mt-auto self-start">View on GitHub</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- GITHUB -->
+  <section class="py-20 reveal">
+    <div class="card rounded-2xl p-10 sm:p-14 text-center">
+      <p class="text-[var(--accent)] font-semibold text-sm mb-2">GitHub</p>
+      <h2 class="font-display text-3xl font-extrabold mb-4">Explore My GitHub</h2>
+      <p class="text-[var(--ink-soft)] mb-8 max-w-md mx-auto">Explore my projects, SQL analyses, dashboards and data experiments on GitHub.</p>
+      <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" class="btn-primary rounded-lg px-6 py-3 font-semibold inline-block">Visit GitHub</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Experience</p>
+    <h2 class="font-display text-3xl font-extrabold mb-8">Experience &amp; Internships</h2>
+    <div class="card rounded-2xl p-8 text-center">
+      <p class="text-[var(--ink-soft)] text-lg">Currently building practical experience through hands-on analytics projects, internships and continuous learning.</p>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Certifications</p>
+    <h2 class="font-display text-3xl font-extrabold mb-10">Certifications</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="card rounded-2xl p-6">
+        <p class="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide mb-2">Tata · via Forage</p>
+        <h3 class="font-display font-bold text-lg mb-2">GenAI Powered Data Analytics Job Simulation</h3>
+        <p class="text-sm text-[var(--ink-soft)] mb-3">Completed practical tasks in exploratory data analysis and risk profiling, predicting delinquency with AI, business reporting and data storytelling, and implementing an AI-driven collections strategy.</p>
+        <p class="text-sm text-[var(--muted)]">Completed August 12, 2026</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <p class="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide mb-2">Deloitte · via Forage</p>
+        <h3 class="font-display font-bold text-lg mb-2">Data Analytics Job Simulation</h3>
+        <p class="text-sm text-[var(--ink-soft)] mb-3">Completed practical tasks in data analysis and forensic technology.</p>
+        <p class="text-sm text-[var(--muted)]">Completed August 10, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="py-20 reveal">
+    <div class="card rounded-2xl p-10 sm:p-14 text-center">
+      <p class="text-[var(--accent)] font-semibold text-sm mb-2">Resume</p>
+      <h2 class="font-display text-3xl font-extrabold mb-4">Interested in My Work?</h2>
+      <p class="text-[var(--ink-soft)] mb-8 max-w-md mx-auto">Explore my resume to learn more about my education, skills, projects and experience.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button disabled class="btn-primary rounded-lg px-6 py-3 font-semibold" title="Resume file coming soon">View Resume</button>
+        <button disabled class="btn-ghost rounded-lg px-6 py-3 font-semibold" title="Resume file coming soon">Download Resume</button>
+      </div>
+      <p class="text-sm text-[var(--muted)] mt-4">Resume file coming soon — buttons will activate once it's added.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 reveal">
+    <p class="text-[var(--accent)] font-semibold text-sm mb-2">Contact</p>
+    <h2 class="font-display text-3xl font-extrabold mb-2">Let's Connect</h2>
+    <p class="text-[var(--ink-soft)] mb-10 max-w-xl">I'm open to Data Analyst opportunities, internships, collaborations and conversations around data and analytics.</p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="space-y-4">
+        <a href="mailto:yatijaiswal435@gmail.com" class="card rounded-xl p-5 flex items-center gap-4 hover:no-underline">
+          <span class="w-10 h-10 rounded-lg bg-[var(--accent-tint)] flex items-center justify-center text-[var(--accent)] flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm text-[var(--muted)]">Email</span>
+            <span class="block font-medium text-[var(--ink)]">yatijaiswal435@gmail.com</span>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/yati-jaiswal/" target="_blank" rel="noopener" class="card rounded-xl p-5 flex items-center gap-4">
+          <span class="w-10 h-10 rounded-lg bg-[var(--accent-tint)] flex items-center justify-center text-[var(--accent)] flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm text-[var(--muted)]">LinkedIn</span>
+            <span class="block font-medium text-[var(--ink)]">linkedin.com/in/yati-jaiswal</span>
+          </span>
+        </a>
+        <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" class="card rounded-xl p-5 flex items-center gap-4">
+          <span class="w-10 h-10 rounded-lg bg-[var(--accent-tint)] flex items-center justify-center text-[var(--accent)] flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.09-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.63.24 2.83.12 3.13.74.8 1.18 1.83 1.18 3.09 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm text-[var(--muted)]">GitHub</span>
+            <span class="block font-medium text-[var(--ink)]">github.com/yatijaiswal435-collab</span>
+          </span>
+        </a>
+      </div>
+
+      <form class="card rounded-2xl p-6 space-y-4" id="contact-form">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1.5">Name</label>
+          <input id="name" name="name" type="text" required class="w-full rounded-lg border border-[var(--line)] px-4 py-2.5 bg-white focus:border-[var(--accent)] outline-none">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1.5">Email</label>
+          <input id="email" name="email" type="email" required class="w-full rounded-lg border border-[var(--line)] px-4 py-2.5 bg-white focus:border-[var(--accent)] outline-none">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1.5">Message</label>
+          <textarea id="message" name="message" rows="4" required class="w-full rounded-lg border border-[var(--line)] px-4 py-2.5 bg-white focus:border-[var(--accent)] outline-none"></textarea>
+        </div>
+        <button type="submit" class="btn-primary rounded-lg px-6 py-3 font-semibold w-full">Send Message</button>
+        <p id="form-note" class="text-xs text-[var(--muted)] text-center">This form isn't connected to a backend yet — it will open your email client to send the message directly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-[var(--line)] mt-10">
+    <div class="flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <p class="font-display font-extrabold text-lg">Yati Jaiswal</p>
+        <p class="text-[var(--accent)] text-sm font-medium mb-2">Data Analyst</p>
+        <p class="text-[var(--muted)] text-sm max-w-xs">Turning Data into Insights, Decisions into Impact.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-[var(--ink-soft)]">
+        <a href="#home" class="hover:text-[var(--accent)]">Home</a>
+        <a href="#about" class="hover:text-[var(--accent)]">About</a>
+        <a href="#projects" class="hover:text-[var(--accent)]">Projects</a>
+        <a href="https://github.com/yatijaiswal435-collab" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">GitHub</a>
+        <a href="https://www.linkedin.com/in/yati-jaiswal/" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">LinkedIn</a>
+        <a href="#resume" class="hover:text-[var(--accent)]">Resume</a>
+        <a href="#contact" class="hover:text-[var(--accent)]">Contact</a>
+      </div>
+    </div>
+    <p class="text-xs text-[var(--muted)] mt-10">© 2026 Yati Jaiswal. All rights reserved.</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
